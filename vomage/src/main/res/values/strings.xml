@@ -5,4 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <string name="main_view_next_button">次へ</string>
+    <string name="main_view_prev_button">前へ</string>
+
 </resources>
