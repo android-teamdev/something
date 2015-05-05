@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 
     @OnClick(R.id.main_view_next_button)
     void onClickNextButton() {
-        if (vomageWords.size() > currentIndex) {
+        if (vomageWords.size() - 1 > currentIndex) {
             currentIndex++;
             applyCurrentVomageWord();
         }
