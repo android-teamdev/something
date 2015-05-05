@@ -2,12 +2,11 @@ package org.atdv.vomage;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.common.collect.Lists;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -18,11 +17,14 @@ import butterknife.OnClick;
 
 public class MainActivity extends Activity {
 
-    @InjectView(R.id.main_view_word_in_english_text)
+    @InjectView(R.id.main_view_english_word_view)
     TextView englishWordTextView;
 
-    @InjectView(R.id.main_view_word_in_japanese_text)
+    @InjectView(R.id.main_view_japanese_meaning_view)
     TextView japaneseWordTextView;
+
+    @InjectView(R.id.main_view_image_meaning_view)
+    ImageView imageMeaningView;
 
     // TODO: paging管理的なのをするクラスつくる
     private List<VomageWord> vomageWords = Lists.newArrayList();
@@ -66,12 +68,15 @@ public class MainActivity extends Activity {
         }
         VomageWord currentVomageWord = vomageWords.get(currentIndex);
         englishWordTextView.setText(currentVomageWord.getEnglishWord().getText());
-        japaneseWordTextView.setText(currentVomageWord.getJapaneseWord().getText());
+        japaneseWordTextView.setText(currentVomageWord.getJapaneseMeaning().getText());
+        Picasso.with(getApplicationContext()).load(currentVomageWord.getImageMeaning().getImageUrls().get(0)).into(imageMeaningView);
     }
 
     private void initWords() {
-        vomageWords.add(new VomageWord(new EnglishWord("cat"), new JapaneseWord("猫")));
-        vomageWords.add(new VomageWord(new EnglishWord("dog"), new JapaneseWord("犬")));
+        String catUrl = getString(R.string.image_meaning_cat_url);
+        String dogUrl = getString(R.string.image_meaning_dog_url);
+        vomageWords.add(new VomageWord(new EnglishWord("cat"), new JapaneseMeaning("猫"), new ImageMeaning(Lists.newArrayList(catUrl))));
+        vomageWords.add(new VomageWord(new EnglishWord("dog"), new JapaneseMeaning("犬"), new ImageMeaning(Lists.newArrayList(dogUrl))));
     }
 
 

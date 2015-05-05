@@ -7,19 +7,26 @@ public class VomageWord {
 
     private final EnglishWord englishWord;
 
-    private final JapaneseWord japaneseWord;
+    private final JapaneseMeaning japaneseMeaning;
 
-    public VomageWord(EnglishWord englishWord, JapaneseWord japaneseWord) {
+    private final ImageMeaning imageMeaning;
+
+    public VomageWord(EnglishWord englishWord, JapaneseMeaning japaneseMeaning, ImageMeaning imageMeaning) {
         this.englishWord = englishWord;
-        this.japaneseWord = japaneseWord;
+        this.japaneseMeaning = japaneseMeaning;
+        this.imageMeaning = imageMeaning;
     }
 
     public EnglishWord getEnglishWord() {
         return englishWord;
     }
 
-    public JapaneseWord getJapaneseWord() {
-        return japaneseWord;
+    public JapaneseMeaning getJapaneseMeaning() {
+        return japaneseMeaning;
+    }
+
+    public ImageMeaning getImageMeaning() {
+        return imageMeaning;
     }
 
 }
