@@ -10,12 +10,13 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/main_view_vomage_word_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/main_view_word_in_english_text"
+            android:id="@+id/main_view_english_word_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="36sp"
@@ -23,12 +24,17 @@
             />
 
         <TextView
-            android:id="@+id/main_view_word_in_japanese_text"
+            android:id="@+id/main_view_japanese_meaning_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:padding="3dp"
             />
+
+        <ImageView
+            android:id="@+id/main_view_image_meaning_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

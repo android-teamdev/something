@@ -3,11 +3,11 @@ package org.atdv.vomage;
 /**
  * Created by matsumotius on 15/05/05.
  */
-public abstract class Word {
+public class JapaneseMeaning {
 
     private final String text;
 
-    public Word(String text) {
+    public JapaneseMeaning(String text) {
         this.text = text;
     }
 
