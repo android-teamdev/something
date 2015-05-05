@@ -10,14 +10,28 @@ import java.util.List;
  */
 public class ImageMeaning {
 
-    private List<String> urls;
+    private final String url;
 
-    public ImageMeaning(List<String> urls) {
-        this.urls = ImmutableList.copyOf(urls);
+    private final int width;
+
+    private final int height;
+
+    public ImageMeaning(String url, int width, int height) {
+        this.url = url;
+        this.width = width;
+        this.height = height;
     }
 
-    public List<String> getImageUrls() {
-        return urls;
+    public String getImageUrl() {
+        return url;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
 }

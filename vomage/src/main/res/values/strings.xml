@@ -11,4 +11,7 @@
     <string name="image_meaning_cat_url">http://gyazo.com/adc97218205858ddee1d72c531b50f0a.png</string>
     <string name="image_meaning_dog_url">http://gyazo.com/ebf604aa5d909b35a2b4c2e9a794deaa.png</string>
 
+
+    <string name="vomage_api_host">https://vomage.herokuapp.com/</string>
+
 </resources>

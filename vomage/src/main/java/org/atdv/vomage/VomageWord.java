@@ -9,12 +9,9 @@ public class VomageWord {
 
     private final JapaneseMeaning japaneseMeaning;
 
-    private final ImageMeaning imageMeaning;
-
-    public VomageWord(EnglishWord englishWord, JapaneseMeaning japaneseMeaning, ImageMeaning imageMeaning) {
+    public VomageWord(EnglishWord englishWord, JapaneseMeaning japaneseMeaning) {
         this.englishWord = englishWord;
         this.japaneseMeaning = japaneseMeaning;
-        this.imageMeaning = imageMeaning;
     }
 
     public EnglishWord getEnglishWord() {
@@ -23,10 +20,6 @@ public class VomageWord {
 
     public JapaneseMeaning getJapaneseMeaning() {
         return japaneseMeaning;
-    }
-
-    public ImageMeaning getImageMeaning() {
-        return imageMeaning;
     }
 
 }
